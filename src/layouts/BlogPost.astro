@@ -8,7 +8,7 @@ type Props = CollectionEntry<'blog'>['data'];
 const { title, description, pubDate, updatedDate, heroImage, tags } = Astro.props;
 ---
 
-<BaseLayout title={title} description={description}>
+<BaseLayout title={title} description={description}, pubDate={pubDate}>
 	<article>
 		<div class="hero-image">
 			{heroImage && <img width={1020} height={510} src={heroImage} alt="" />}
@@ -16,7 +16,7 @@ const { title, description, pubDate, updatedDate, heroImage, tags } = Astro.prop
 		<div class="prose">
 			<div class="title">
 				<div class="date">
-					{pubDate && <FormattedDate date={pubDate} />}
+					<FormattedDate date={pubDate} />
 					{
 						updatedDate && (
 							<div class="last-updated-on">

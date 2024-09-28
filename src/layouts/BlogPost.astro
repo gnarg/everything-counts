@@ -27,7 +27,7 @@ const { title, description, pubDate, updatedDate, heroImage, tags } = Astro.prop
 				</div>
 				<h1>{title}</h1>
 				<div class="tags">
-					{tags && <span>tags: </span>}
+					{tags && <span>tags </span>}
 					{tags && tags.map((tag) => <a style="padding: 0.25em;" href={`/tags/${tag}`}>{tag}</a>)}
 				</div>
 				<hr />

@@ -11,6 +11,7 @@ const { title, description, pubDate, updatedDate, heroImage, tags } = Astro.prop
 <BaseLayout title={title} description={description}, pubDate={pubDate}>
 	<article class="h-entry">
 		<span class="p-summary" hidden>{description}</span>
+		<span class="p-author" hidden>Jon Guymon</span>
 		<div class="hero-image">
 			{heroImage && <img width={1020} height={510} src={heroImage} alt="" />}
 		</div>
@@ -33,7 +34,9 @@ const { title, description, pubDate, updatedDate, heroImage, tags } = Astro.prop
 				</div>
 				<hr />
 			</div>
-			<slot />
+			<div class="e-content">
+				<slot />
+			</div>
 		</div>
 	</article>
 </BaseLayout>

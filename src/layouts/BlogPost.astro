@@ -30,7 +30,7 @@ const { title, description, pubDate, updatedDate, heroImage, tags } = Astro.prop
 				<h1 class="p-name">{title}</h1>
 				<div class="tags">
 					{tags && <span>tags </span>}
-					{tags && tags.map((tag) => <a style="padding: 0.25em;" href={`/tags/${tag}`} class="p-category">{tag}</a>)}
+					{tags && tags.map((tag: string) => <a style="padding: 0.25em;" href={`/tags/${tag}`} class="p-category">{tag}</a>)}
 				</div>
 				<hr />
 			</div>
